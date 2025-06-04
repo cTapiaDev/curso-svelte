@@ -54,6 +54,135 @@
                 <p>Esta es una cita sobre los autores de los viajes a los Andes</p>
             </blockquote>
         </section>
+
+
+        <section id="tablas-ejemplo">
+            <h3>Tablas</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Valor 1</th>
+                        <th>Valor 2</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Producto B</td>
+                        <td>150</td>
+                        <td>100</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>Producto C</td>
+                        <td>50</td>
+                        <td>300</td>
+                        <td>350</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total General</td>
+                        <td>750</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+
+        <section id="formularios-ejemplo">
+            <h3>Formularios</h3>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Información Personal:</legend>
+                    <div>
+                        <label for="nombre-form">Nombre:</label>
+                        <input type="text" id="nombre-form" required placeholder="Escribe tu nombre">
+                    </div>
+                    <div>
+                        <label for="email-form">Email:</label>
+                        <input type="email" id="email-form" required>
+                    </div>
+                    <div>
+                        <label for="password-form">Contraseña:</label>
+                        <input type="password" id="password-form" required minlength="8">
+                    </div>
+                    <div>
+                        <label for="telefono-form">Teléfono:</label>
+                        <input type="tel" id="telefono-form">
+                    </div>
+                    <div>
+                        <label for="fecha-form">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha-form">
+                    </div>
+                    <div>
+                        <label for="edad-form">Edad:</label>
+                        <input type="number" id="edad-form" min="18" max="99">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <p>¿Qué temas te interesan?</p>
+
+                    <div>
+                        <input type="checkbox" id="interes-form" value="html">
+                        <label for="interes-form">HTML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interes-form-2" value="css" checked>
+                        <label for="interes-form-2">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interes-form-3" value="js">
+                        <label for="interes-form-3">JavaScript</label>
+                    </div>
+
+                    <p>Nivel de experiencia:</p>
+                    <div>
+                        <input type="radio" id="exp-uno" value="principiante">
+                        <label for="exp-uno">Principiante</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="exp-dos" value="intermedio">
+                        <label for="exp-dos">Intermedio</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="exp-tres" value="avanzado">
+                        <label for="exp-tres">Avanzado</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Otros datos</legend>
+                    <div>
+                        <label for="pais">País:</label>
+                        <select name="usuarios-pais" id="pais">
+                            <optgroup label="América">
+                                <option value="ch">Chile</option>
+                                <option value="ar">Argentina</option>
+                                <option value="mx" selected>México</option>
+                            </optgroup>
+                            <optgroup label="Europa">
+                                <option value="es">España</option>
+                                <option value="fr">Francia</option>
+                                <option value="en">Inglaterra</option>
+                            </optgroup>
+                            <option value="otro">Otro país</option>
+                        </select>
+    
+                    </div>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
 </body>
