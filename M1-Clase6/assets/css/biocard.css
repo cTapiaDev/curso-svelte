@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+}
+
+.biocard {
+    width: 400px;
+    height: auto;
+    border: 2px solid #000;
+    padding: 30px;
+    background-color: #EEB935;
+}
+
+.biocard img {
+    width: 100%;
+    border: 2px solid #000;
+}
+
+.biocard h2 {
+    margin-top: 10px;
+    color: #382E29;
+}
+
+.biocard p {
+    margin-top: 5px;
+}
