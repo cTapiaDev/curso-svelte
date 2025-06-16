@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5px;
+}
+
+.desafio {
+    width: 300px;
+    height: 500px;
+    background-color: #ad1c42;
+    border: 5px solid #000;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 5px groove;
+}
+
+.tarjeta {
+    width: 400px;
+    height: 250px;
+    background-color: burlywood;
+    padding: 50px;
+    border: 10px solid #000;
+}
