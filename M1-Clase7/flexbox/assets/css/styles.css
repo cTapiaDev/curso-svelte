@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenedor div {
+    width: 100px;
+    height: 100px;
+}
+
+.caja-hija-1 {
+    background-color: blue;
+    display: flex;
+    color: white;
+}
+
+.caja-hija-2 {
+    background-color: red;
+    display: flex;
+}
+
+.caja-hija-3 {
+    background-color: green;
+    display: flex;
+}
+
+.caja-hija-4 {
+    background-color: yellow;
+    display: flex;
+}
