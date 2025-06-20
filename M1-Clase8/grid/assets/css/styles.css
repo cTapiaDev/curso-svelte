@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.item-normal {
+    background-color: blue;
+}
+
+.contenedor-item-2-col {
+    grid-column: span 2;
+    background-color: red;
+}
+
+.contenedor-item-2-row {
+    grid-row: span 2;
+    background-color: green;
+}
