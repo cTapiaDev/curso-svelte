@@ -1,0 +1,70 @@
+body {
+    background-color: blue;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    font-size: 14px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contenedor div {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+
+
+@media (min-width: 768px) {
+    
+    body {
+        background-color: green;
+    }
+
+}
+
+@media (min-width: 992px) {
+    
+    body {
+        background-color: orange;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    
+    body {
+        background-color: red;
+    }
+
+    .contenedor {
+        flex-direction: row;
+    }
+
+}
+
+
+@media (min-width: 1400px) {
+    
+    body {
+        background-color: blueviolet;
+    }
+
+}
+
+
+
+
+
+
+
+
