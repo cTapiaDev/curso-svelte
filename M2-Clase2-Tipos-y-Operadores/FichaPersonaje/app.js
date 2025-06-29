@@ -20,7 +20,7 @@ const characterBio = `${characterName} (${characterRace}): Nivel ${currentLevel}
 
 // --- Verificaciones Lógicas ---
 const isPowerful = attackPower > 100;
-const canEnterDungeon = currentLevel >= 100 && isAlive === true;
+const canEnterDungeon = (currentLevel >= 100) && (isAlive === true);
 
 console.log("--------------------")
 console.log(characterBio);
