@@ -12,10 +12,10 @@ console.log('Pikachu: "Nivel 10"');
 // console.log('Pikachu: 'Nivel 10'');
 
 let nombre;
-console.log(nombre);
+console.log(nombre); // undefined
 
 let apellido = null;
-console.log(apellido);
+console.log(apellido); // Null
 
 let datoNumerico = 25;
 let datoDeTexto = "Hola Mundo 2";
@@ -44,9 +44,9 @@ console.log("Multiplicación:", multi);
 let division = num1 / num2;
 console.log("División:", division);
 
-let modulo1 = 10 % 2;
-let modulo2 = 10 % 3;
-
+let modulo1 = 10 % 2; // 0
+let modulo2 = 10 % 3; // 1
+ 
 console.log("Modulo1:", modulo1);
 console.log("Modulo2:", modulo2);
 
