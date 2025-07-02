@@ -48,7 +48,7 @@ console.log(!esHombre);
 
 // --- Falsy ---
 
-let dato = 5 + 5;
+let dato = 5 - 5;
 
 if (dato) {
     console.log("El dato es un Truthy");
