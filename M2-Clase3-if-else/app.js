@@ -3,23 +3,24 @@
 
 let tengoHambre = true;
 
-if (tengoHambre === true) {
+if (tengoHambre === true) { // true === true -> true
     console.log("Voy a comer una pizza 🍕");
 } else {
     console.log("No tengo hambre.");
 }
 
 // --- PRACTICA ---
-let userAge = 18;
+let userAge = 19;
+const edadLimite = 21;
 
-if (userAge >= 18) {
+if (userAge >= edadLimite) { // ¿La edad del usuario es mayor o igual a 18 años?
     console.log("Acceso permitido al contenido.");
 } else {
     console.log("Acceso denegado.");
 }
 
 // --- if / else if / else ---
-let nota = 4.0;
+let nota = 9.0;
 
 if (nota === 7.0) {
     console.log("¡Excelente!");
@@ -44,11 +45,13 @@ console.log(edad >= 18 && esHombre === false); // true && false = false
 console.log(edad >= 18 || esHombre === false);  // true || false = true
 console.log(edad < 18 || esHombre === false); // false || false = false
 
-console.log(!esHombre);
+console.log(esHombre); // True
+console.log(!esHombre); // False
 
 // --- Falsy ---
 
 let dato = 5 - 5;
+// 0 - " " - false - Null - undefined - NaN
 
 if (dato) {
     console.log("El dato es un Truthy");

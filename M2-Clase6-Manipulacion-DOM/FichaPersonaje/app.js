@@ -105,3 +105,15 @@ console.log(descriptionDisplay);
 console.log(imageDisplay);
 console.log(buttonDisplay);
 console.log(skillListItems);
+
+console.log("");
+console.log("-------------------------")
+console.log("--- Actividad Clase 6 ---")
+console.log("-------------------------")
+
+nameDisplay.textContent = characterName;
+descriptionDisplay.innerHTML = `El príncipe de los <em>${characterRace}</em>`;
+imageDisplay.src = "https://i.pinimg.com/1200x/c2/e8/72/c2e872974c437c2545a281093d02451c.jpg";
+skillListItems[0].classList.add('ability-highlight');
+buttonDisplay.style.backgroundColor = 'red';
+buttonDisplay.style.color = 'white';
