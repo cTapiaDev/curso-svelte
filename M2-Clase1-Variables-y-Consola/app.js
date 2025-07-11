@@ -1,7 +1,8 @@
 
 console.log("¡Hola Mundo!");
-console.log(10 + 5);
-console.log("10 + 5");
+console.log(10 + 5); // 15
+console.log("10 + 5"); // 10 + 5
+console.log("10 + 5 =", 10 + 5); // 10 + 5 = 15
 
 // --- VARIABLES ---
 // var edad = 25; // FORMA ANTIGUA

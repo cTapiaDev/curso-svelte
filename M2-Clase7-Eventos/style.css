@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: url('https://i.pinimg.com/736x/11/9c/3c/119c3cb7d82c5bb17b3c65954993890d.jpg');
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+.img-oculta {
+    width: 500px;
+    height: 500px;
+    background-image: url('https://i.pinimg.com/1200x/1e/e4/5b/1ee45bf095dee1eefd72a58291629ab6.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    transition: 1s all;
+}
+
+.efecto {
+    transform: scale(0);
+}
