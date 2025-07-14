@@ -17,7 +17,7 @@ miCaja.style.backgroundImage = 'url("https://www.directvsports.com/__export/1724
 miCaja.style.backgroundSize = 'cover';
 
 miCirculo.classList.add('personaje');
-miRectangulo.classList.toggle('personaje');
+miRectangulo.classList.toggle('personaje'); // Agregar o quitar, dependiendo si existe o no
 
 // -- Práctico --
 miParrafo = document.querySelector('p');
