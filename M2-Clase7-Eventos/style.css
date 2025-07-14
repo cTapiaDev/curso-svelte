@@ -20,7 +20,7 @@ body {
     background-image: url('https://i.pinimg.com/736x/11/9c/3c/119c3cb7d82c5bb17b3c65954993890d.jpg');
     background-size: cover;
     display: flex;
-    overflow: hidden;
+    overflow: hidden; /* Establece como límite los bordes del tamaño que tiene .container */
 }
 
 .img-oculta {
@@ -29,9 +29,9 @@ body {
     background-image: url('https://i.pinimg.com/1200x/1e/e4/5b/1ee45bf095dee1eefd72a58291629ab6.jpg');
     background-size: cover;
     border-radius: 10px;
-    transition: 1s all;
+    transition: 2s all; /* Se tarda en cambiar de tamaño en todos lados, 1 segundo */
 }
 
 .efecto {
-    transform: scale(0);
+    transform: scale(0); /* Genera una transformación de tamaño que va de 0 a 1 */
 }

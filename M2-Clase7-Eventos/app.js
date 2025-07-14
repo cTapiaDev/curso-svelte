@@ -16,7 +16,25 @@ function cambiarFondo() {
 
 miContainer.addEventListener('mouseover', () => {
     segundaImg.classList.toggle('efecto');
+    // segundaImg.classList.remove('efecto');
 });
 miContainer.addEventListener('mouseout', () => {
     segundaImg.classList.toggle('efecto');;
 })
+
+
+
+// If ternario //
+let edad = 16
+
+edad > 18 
+    ? console.log('Tiene 18 años o más') 
+    : console.log("Es menor de edad");
+
+edad > 18 ? console.log('Tiene 18 años o más') : console.log("Es menor de edad");
+
+// if (edad > 18) {
+//     console.log('Tiene 18 años o más') 
+// } else {
+//     console.log("Es menor de edad")
+// }
