@@ -4,3 +4,5 @@ const datosJS = JSON.parse(datosJSON);
 console.log(datosJS);
 console.log(datosJS.arma);
 console.log(datosJS.destino);
+console.log(datosJS.nombre);
+console.log(datosJS.edad);
