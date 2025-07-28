@@ -1,6 +1,8 @@
-fetch('https://fakestoreapi.com/product')
+console.log('Hola antes de fetch');
+
+fetch('https://fakestoreapi.com/products')
     .then(res => {
-        if (!res.ok) {
+        if (!res.ok) { // response.ok
             throw new Error(`ERROR HTTP: ${res.status}`);
         }
         return res.json();
@@ -8,4 +10,5 @@ fetch('https://fakestoreapi.com/product')
     .then(data => console.log("¡Exito!", data))
     .catch(error => console.error("¡Ha ocurrido un error!", error))
     .finally(() => console.log("Se está ejecutando el finally. No importa si falló o no."));
+
 
