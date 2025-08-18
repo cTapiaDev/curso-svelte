@@ -1,0 +1,133 @@
+/* Variables y Estilos */
+:root {
+    --color-primario: #6a11cb;
+    --color-secundario: #2575fc;
+    --color-fondo: #eef1f5;
+    --color-tarjeta: #fff;
+    --color-texto: #1d1f24;
+    --color-texto-secundario: #6c757d;
+    --color-exito: #28a745;
+    --color-peligro: #dc3545;
+    --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Estilos Base (Mobile First) --- */
+.contenedor-app {
+    min-width: 330px;
+    width: 550px;
+    max-width: 550px;
+    margin: 40px 10px;
+    padding: 20px;
+    background-color: var(--color-fondo);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cabecera-app h1 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+#contador-tareas {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-texto-secundario);
+    font-weight: 600;
+}
+
+#formulario-nueva-tarea {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#input-nueva-tarea {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border-color 0.5s;
+}
+
+#input-nueva-tarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+#formulario-nueva-tarea button {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+
+#formulario-nueva-tarea button:hover {
+    transform: scale(1.1);
+}
+
+#lista-tareas {
+    list-style: none;
+}
+
+#lista-tareas li {
+    background-color: var(--color-tarjeta);
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: var(--sombra-suave);
+    cursor: pointer;
+}
+
+#lista-tareas li span {
+    flex-grow: 1;
+    margin-right: 15px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    overflow: hidden;
+}
+
+.boton-borrar {
+    background-color: var(--color-peligro);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+}
+
+.boton-borrar:hover {
+    background-color: #c82333;
+}
