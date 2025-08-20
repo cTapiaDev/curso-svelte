@@ -25,7 +25,7 @@ const renderizarTareas = () => {
     if (tareas.length === 0) {
         listaTareas.innerHTML = '<li class="sin-tareas"><p>¡Felicidades, no hay tareas pendientes!</p></li>';
         actualizarContador();
-        return;s
+        return;
     }
 
     tareas.forEach(tarea => {
@@ -71,7 +71,31 @@ const agregarTarea = (evento) => {
     inputTarea.value = '';
 }
 
+const manejarClicLista = (evento) => {
+    const elemento = evento.target;
+    const li = elemento.closest('li')
+
+    if (!li) return;
+
+    const idTarea = Number(li.getAttribute('data-id'));
+
+    if (elemento.classList.contains('boton-borrar')) {
+        tareas = tareas.filter(tarea => tarea.id !== idTarea);
+    }
+    // } else {
+    //     tareas = tareas.map(tarea =>
+    //         tarea.id === idTarea
+    //             ? { ...tarea, completada: !tarea.completada }
+    //             : tarea
+    //     )
+    // }
+
+    guardarTareas();
+    renderizarTareas();
+}
+
 // INICIALIZACIÓN //
 
 document.addEventListener('DOMContentLoaded', renderizarTareas);
 formularioTareas.addEventListener('submit', agregarTarea);
+listaTareas.addEventListener('click', manejarClicLista);
