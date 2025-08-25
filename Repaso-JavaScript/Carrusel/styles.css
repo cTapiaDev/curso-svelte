@@ -6,6 +6,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -16,6 +17,9 @@ body {
 .carrusel-contenedor {
     width: 90%;
     max-width: 700px;
+    height: 50%;
+    max-height: 400px;
+    overflow: hidden;
     position: relative;
 }
 
@@ -28,6 +32,26 @@ body {
 .carrusel-diapositivas {
     display: flex;
     transition: transform 0.5s;
+}
+
+/* 
+    nth-child podemos utilizarlo con números. 
+    even -> accede a los hijos pares.
+    odd -> accede a los hijos impares.
+    first-child -> accede solo al primer hijo.
+    last-child -> accede solo al último hijo.
+*/
+.carrusel-diapositivas .diapositiva:nth-child(1) img,
+.carrusel-diapositivas .diapositiva:nth-child(4) img {
+    transform: translateY(-450px);
+}
+
+.carrusel-diapositivas .diapositiva:nth-child(2) img {
+    transform: translateY(-150px);
+}
+
+.carrusel-diapositivas .diapositiva:nth-child(3) img {
+    transform: translateY(-250px);
 }
 
 .diapositiva {
@@ -59,4 +83,24 @@ body {
 
 #boton-siguiente {
     right: 15px;
+}
+
+.carrusel-puntos {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.punto {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #7f8c8d;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.punto.activo {
+    background-color: #ecf0f1;
 }

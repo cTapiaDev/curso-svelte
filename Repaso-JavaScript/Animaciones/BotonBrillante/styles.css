@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: #1a1a2e;
+    margin: 0;
+    gap: 50px;
+}
+
+.titulo-animado {
+    font-family: 'Arial-Black', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff00c1, #9a00ff, #00b8ff, #00ffc8, #ff00c1);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flujo-gradiente 16s linear infinite;
+}
+
+.boton-brillante {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 39, 67, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(220, 39, 67, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 39, 67, 0);
+    }
+}
+
+@keyframes flujo-gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
