@@ -6,7 +6,7 @@ lienzo.width = window.innerWidth;
 lienzo.height = window.innerHeight;
 
 let particulas = [];
-const mouse = { x: null, y: null, radio: 150 };
+const mouse = { x: null, y: null, radio: 100 };
 
 window.addEventListener('mousemove', (evento) => {
     mouse.x = evento.x;
@@ -65,3 +65,29 @@ class Particula {
         }
     }
 }
+
+// --- Iniciación ---
+function inicializar() {
+    particulas = [];
+    // Recorre los píxeles de la image. El 'step' (ej: 10) determina la densidad.
+    for (let y = 0; y < datosImagen.height; y += 10) {
+        for (let x = 0; x < datosImagen.width; x += 10) {
+            if (datosImagen.data[(y * 4 * datosImagen.width) + (x * 4) + 3] > 128) {
+                particulas.push(new Particula(x, y));
+            }
+        }
+    }
+}
+
+function animar() {
+    ctx.clearRect(0, 0, lienzo.width, lienzo.height);
+    particulas.forEach(p => {
+        p.actualizar();
+        p.dibujar();
+    });
+    requestAnimationFrame(animar);
+}
+
+inicializar();
+animar();
+

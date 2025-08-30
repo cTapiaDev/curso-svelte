@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    width: 0%;
+    z-index: 100;
+    transition: width 0.1s linear;
+}
+
+.contenido {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
