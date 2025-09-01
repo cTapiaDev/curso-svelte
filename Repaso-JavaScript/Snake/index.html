@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Serpiente</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <main class="contenedor-juego">
+        <h1>Serpiente en Canvas</h1>
+        <div class="info-juego">
+            <span class="puntaje">Puntaje: <span id="puntaje-actual">0</span></span>
+            <span class="puntaje-maximo">Puntaje Máximo: <span id="puntaje-maximo">0</span></span>
+        </div>
+        <canvas id="lienzo-juego" width="400" height="400"></canvas>
+        <div id="mensaje-game-over">
+            <h2>¡Juego Terminado!</h2>
+            <p>Presiona 'Enter' para volver a jugar.</p>
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
