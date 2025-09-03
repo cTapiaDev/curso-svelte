@@ -116,7 +116,7 @@ function moverTodo() {
         vidas--;
         if (vidas === 0) {
             mensajeDerrota.style.display = 'block';
-            document.location.reload();
+            // document.location.reload();
         } else {
             reiniciarPosiciones();
         }
@@ -137,7 +137,7 @@ function moverTodo() {
                     // Comprobar si ganó
                     if (puntaje === configLadrillos.filas * configLadrillos.columnas) {
                         mensajeVictoria.style.display = 'block';
-                        document.location.reload();
+                        // document.location.reload();
                     }
                 }
             }
@@ -149,12 +149,38 @@ function reiniciarPosiciones() {
     bola.x = lienzo.width / 2;
     bola.y = lienzo.height - 30;
     bola.velocidadX = 4,
-        bola.velocidadY = -4;
+    bola.velocidadY = -4;
     paleta.x = (lienzo.width - paleta.ancho) / 2;
 }
 
 // JUEGO PRINCIPAL
 function actualizar() {
+    contexto.clearRect(0, 0, lienzo.width, lienzo.height);
 
+    dibujarBola();
+    dibujarPaleta();
+    dibujarLadrillos();
+    dibujarInfo();
+
+    moverTodo();
+
+    requestAnimationFrame(actualizar);
 }
+
+function moverPaleta(evento) {
+    const rect = lienzo.getBoundingClientRect();
+    const posicionRelativaX = evento.clientX - rect.left;
+
+    if (posicionRelativaX > 0 && posicionRelativaX < lienzo.width) {
+        paleta.x = posicionRelativaX - paleta.ancho / 2;
+    }
+}
+
+document.addEventListener('mousemove', moverPaleta);
+
+crearLadrillos();
+actualizar();
+
+mensajeVictoria.addEventListener('click', () => document.location.reload());
+mensajeDerrota.addEventListener('click', () => document.location.reload());
 
